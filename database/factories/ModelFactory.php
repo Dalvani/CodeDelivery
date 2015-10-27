@@ -58,3 +58,10 @@ $factory->define(CodeDelivery\Models\OrderItem::class, function (Faker\Generator
 
     ];
 });
+
+$factory->define(CodeDelivery\Models\Cupom::class, function (Faker\Generator $faker) {
+    return [
+        'code' => rand(100, 10000),
+        'value' => rand(50, 100)
+    ];
+});
