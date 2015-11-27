@@ -55,3 +55,19 @@ Route::group(['prefix'=>'customer', 'middleware'=> 'auth.checkrole:client', 'as'
     Route::get('order/create', ['as'=>'order.create', 'uses'=>'CheckoutController@create']);
     Route::post('order/store', ['as'=>'order.store', 'uses'=>'CheckoutController@store']);
 });
+
+Route::post('oauth/access_token', function() {
+    return Response::json(Authorizer::issueAccessToken());
+});
+
+
+Route::group(['prefix'=>'api', 'middleware'=> 'oauth','as'=>'api.'], function() {
+    Route::get('teste', function(){
+        return [
+            'id' => 1,
+            'client' => 'Luiz Carlos',
+            'total' => 10
+        ];
+    });
+});
+
