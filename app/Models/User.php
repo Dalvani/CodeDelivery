@@ -21,6 +21,11 @@ class User extends Model implements Transformable,AuthenticatableContract,Author
         return $this->hasOne(Client::class);
     }
 
+    public function order()
+    {
+        return $this->hasOne(Order::class, 'user_deliveryman_id');
+    }
+
     /**
      * The database table used by the model.
      *
@@ -33,7 +38,7 @@ class User extends Model implements Transformable,AuthenticatableContract,Author
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password', 'role'];
 
     /**
      * The attributes excluded from the model's JSON form.
