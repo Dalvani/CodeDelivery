@@ -10,6 +10,6 @@ angular.module('starter.controllers')
                     $scope.user = data.data;
                 });
             };
-            $scope.getUser();
 
+            $scope.getUser();
     }]);
