@@ -7,11 +7,12 @@ angular.module('starter.controllers', []);
 angular.module('starter.services', []);
 
 angular.module('starter', [
-    'ionic', 'angular-oauth2', 'starter.controllers', 'starter.services', 'ngResource'
+    'ionic', 'angular-oauth2', 'starter.controllers', 'starter.services', 'ngResource', 'ngCordova',
 ])
 
 .constant('appConfig', {
-    baseUrl: 'http://laravel-codedelivery.dev'
+    //baseUrl: 'http://laravel-codedelivery.local'
+    baseUrl: 'http://192.168.168.155:8000'
 })
 
 .run(function($ionicPlatform) {
@@ -32,7 +33,7 @@ angular.module('starter', [
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig) {
+.config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig, $provide) {
     OAuthProvider.configure({
         baseUrl: appConfig.baseUrl,
         clientId: 'appid01',
@@ -75,6 +76,7 @@ angular.module('starter', [
             controller: 'ClientCheckoutDetailCtrl'
         })
         .state('client.checkout_successful', {
+            cache: false,
             url: '/checkout/successful',
             templateUrl: 'templates/client/checkout_successful.html',
             controller: 'ClientCheckoutSuccessfulCtrl'
@@ -90,7 +92,39 @@ angular.module('starter', [
             controller: 'ClientViewOrderCtrl'
         });
 
-    //$urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
+
+    $provide.decorator('OAuthToken',['$localStorage', '$delegate',
+        function ($localStorage, $delegate) {
+            //console.log($delegate);
+            Object.defineProperties($delegate, {
+                setToken: {
+                    value: function(data) {
+                        return $localStorage.setObject('token', data);
+                    },
+                    enumerable: true, //quando recupera o objeto o método estará visivel
+                    configurable: true, // atraves de funções da class object é possivel a alterar o objeto
+                    writable: true //é possivel alterar mudar um método para "setToken = function(){}"
+                },
+                getToken: {
+                    value: function() {
+                        return $localStorage.getObject('token');
+                    },
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                },
+                removeToken: {
+                    value: function() {
+                        return $localStorage.setObject('token', null);
+                    },
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                }
+            });
+            return $delegate;
+    }]);
 })
 
 .service('cart', function() {

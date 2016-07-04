@@ -4,14 +4,20 @@
     <list default="true" id="614c3f9d-abd4-489d-8694-4670b5c4454f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/ProductRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/ProductRepositoryEloquent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/ProductTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/ProductTransformer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/CupomRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/CupomRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/CupomRepositoryEloquent.php" afterPath="$PROJECT_DIR$/app/Repositories/CupomRepositoryEloquent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Transformers/CupomTransformer.php" afterPath="$PROJECT_DIR$/app/Transformers/CupomTransformer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/bower.json" afterPath="$PROJECT_DIR$/ionic/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/config.xml" afterPath="$PROJECT_DIR$/ionic/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/package.json" afterPath="$PROJECT_DIR$/ionic/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/index.html" afterPath="$PROJECT_DIR$/ionic/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/app.js" afterPath="$PROJECT_DIR$/ionic/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/home.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/controllers/login.js" afterPath="$PROJECT_DIR$/ionic/www/js/controllers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/lib/angular/.bower.json" afterPath="$PROJECT_DIR$/ionic/www/lib/angular/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/js/services/cart.js" afterPath="$PROJECT_DIR$/ionic/www/js/services/cart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/client/checkout.html" afterPath="$PROJECT_DIR$/ionic/www/templates/client/checkout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html" afterPath="$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html" />
     </list>
     <ignored path="laravel-codedelivery.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -5395,7 +5401,18 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.268018">
+              <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -5411,11 +5428,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/OAuthCheckRole.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Client/CheckOutController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/OrdersController.php" />
         <option value="$PROJECT_DIR$/app/Repositories/OrderRepository.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CheckoutRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CheckOutController.php" />
@@ -5426,7 +5438,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/Deliveryman/DeliverymanCheckOutController.php" />
         <option value="$PROJECT_DIR$/app/Presenters/UserPresenter.php" />
         <option value="$PROJECT_DIR$/app/Transformers/ClientTransformer.php" />
-        <option value="$PROJECT_DIR$/app/Transformers/CupomTransformer.php" />
         <option value="$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/app/Transformers/UserTransformer.php" />
         <option value="$PROJECT_DIR$/app/Transformers/OrderItemTransformer.php" />
@@ -5437,10 +5448,8 @@
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/ionic/www/templates/login.html" />
         <option value="$PROJECT_DIR$/ionic/www/templates/home.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/login.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout-detail.html" />
         <option value="$PROJECT_DIR$/ionic/www/templates/client/view-product.html" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Repositories/ProductRepositoryEloquent.php" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/home.js" />
         <option value="$PROJECT_DIR$/ionic/bower.json" />
@@ -5450,18 +5459,26 @@
         <option value="$PROJECT_DIR$/ionic/www/templates/client/view_products.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/localStorage.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/viewProduct.js" />
-        <option value="$PROJECT_DIR$/ionic/www/js/services/cart.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout_item_detail.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutDetail.js" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js" />
-        <option value="$PROJECT_DIR$/ionic/www/index.html" />
-        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
-        <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js" />
-        <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout.html" />
         <option value="$PROJECT_DIR$/ionic/www/js/services/order.js" />
         <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/viewOrder.js" />
         <option value="$PROJECT_DIR$/ionic/www/templates/client/view_orders.html" />
+        <option value="$PROJECT_DIR$/app/Repositories/CupomRepository.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/CupomController.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/CupomRepositoryEloquent.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/ionic/www/js/services/cupom.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/services/cart.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js" />
+        <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html" />
+        <option value="$PROJECT_DIR$/app/Transformers/CupomTransformer.php" />
+        <option value="$PROJECT_DIR$/ionic/www/templates/client/checkout.html" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/login.js" />
+        <option value="$PROJECT_DIR$/ionic/config.xml" />
+        <option value="$PROJECT_DIR$/ionic/www/index.html" />
+        <option value="$PROJECT_DIR$/ionic/www/js/app.js" />
+        <option value="$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js" />
       </list>
     </option>
   </component>
@@ -5480,7 +5497,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="962" />
+    <option name="x" value="957" />
     <option name="width" value="974" />
     <option name="height" value="1049" />
   </component>
@@ -5510,7 +5527,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -5521,6 +5537,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -5531,16 +5548,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\templates\client" />
-      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\js\controllers\client" />
-      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\js\services" />
-      <recent name="C:\laragon\www\laravel-codedelivery\app\Http\Controllers\Api\Client" />
-      <recent name="C:\laragon\www\laravel-codedelivery\app\Http\Requests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Y:\laravel-codedelivery\app\Models" />
       <recent name="Y:\laravel-codedelivery\app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\js\services" />
+      <recent name="C:\laragon\www\laravel-codedelivery\app\Http\Controllers\Api" />
+      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\templates\client" />
+      <recent name="C:\laragon\www\laravel-codedelivery\ionic\www\js\controllers\client" />
+      <recent name="C:\laragon\www\laravel-codedelivery\app\Http\Controllers\Api\Client" />
     </key>
   </component>
   <component name="RunManager">
@@ -5591,19 +5608,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="962" y="0" width="974" height="1049" extended-state="0" />
+    <frame x="957" y="0" width="974" height="1049" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3380744" sideWeight="0.28056768" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37713677" sideWeight="0.40458015" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3380744" sideWeight="0.7194323" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38621444" sideWeight="0.59497815" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -5634,55 +5651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Services/OrderService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25667828">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/Deliveryman/DeliverymanCheckOutController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13821138">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/OrderRepositoryEloquent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21718931">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2369338">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33565623">
-          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presenters/UserPresenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21718931">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepositoryEloquent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7897793">
@@ -5694,13 +5662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55284554">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Transformers/CupomTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51335657">
-          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -5728,20 +5689,6 @@
     <entry file="file://$PROJECT_DIR$/ionic/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.05749718">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -5802,13 +5749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.118329465">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22972973">
@@ -5830,20 +5770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/localStorage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32545045">
-          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6509009">
-          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ionic/www/templates/client/checkout_item_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
@@ -5858,72 +5784,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.038288288">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6509009">
-          <caret line="34" column="57" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39443156">
-          <caret line="20" column="93" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1722973">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/templates/client/checkout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3549884">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6718563">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6554054">
-          <caret line="86" column="34" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/product.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19144145">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/client/viewProduct.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.019144144">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5931,7 +5795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19721578">
           <caret line="10" column="67" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5939,15 +5802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13805105">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.076576576">
-          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5955,7 +5809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2169373">
           <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5963,7 +5816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49303943">
           <caret line="27" column="84" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5971,7 +5823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.60556847">
           <caret line="54" column="20" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5979,15 +5830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0846868">
-          <caret line="70" column="79" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -5995,7 +5837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31554523">
           <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -6003,6 +5844,168 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5168919">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Presenters/CupomPresenter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/CupomRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2363847">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/CupomRepositoryEloquent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29200464">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/CupomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35457706">
+          <caret line="18" column="79" selection-start-line="18" selection-start-column="79" selection-end-line="18" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6651217">
+          <caret line="79" column="63" selection-start-line="79" selection-start-column="63" selection-end-line="79" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/OrderService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2908459">
+          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/client/checkout_successful.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13789108">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/client/checkoutSuccessful.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09561305">
+          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transformers/CupomTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63035923">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/templates/client/checkout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72969836">
+          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82830626">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5506756">
+          <caret line="81" column="60" selection-start-line="81" selection-start-column="60" selection-end-line="81" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/cupom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.076576576">
+          <caret line="4" column="82" selection-start-line="4" selection-start-column="82" selection-end-line="4" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/localStorage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32545045">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.076576576">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/services/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19144145">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/lib/angular-oauth2/dist/angular-oauth2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28716215">
+          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42754492">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.118329465">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/controllers/client/checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9189189">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ionic/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.268018">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
           <folding />
         </state>
       </provider>

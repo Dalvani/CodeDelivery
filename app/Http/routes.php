@@ -77,6 +77,8 @@ Route::group(['middleware' => 'cors'], function(){
             Route::patch('order/{id}/update-status',['as' => 'orders.update_status', 'uses' => 'Api\Deliveryman\DeliverymanCheckoutController@updateStatus']);
         });
 
+        Route::get('cupom/{code}', 'Api\CupomController@show');
+
         Route::get('authenticated', 'Api\Client\ClientCheckoutController@authenticated');
 
         Route::get('teste', function(){

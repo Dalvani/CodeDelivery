@@ -5,6 +5,10 @@
     </div>
     <ion-content class="padding has-subheader">
         <ion-list>
+            <ion-item class="item-dark" ng-show="cupom.value != null">
+                <strong>Cupom</strong>
+                <spam class="badge badge-dark">- RS {{cupom.value | number:2}}</spam>
+            </ion-item>
             <ion-item ng-repeat="o in items">
                 <h2>{{o.name}}</h2>
                 <div class="row">
