@@ -75,6 +75,8 @@ function OAuthProvider() {
 
   /**
    * OAuth service.
+   *
+   * @ngInject
    */
 
   this.$get = function($http, OAuthToken) {
@@ -105,16 +107,23 @@ function OAuthProvider() {
        * Retrieves the `access_token` and stores the `response.data` on cookies
        * using the `OAuthToken`.
        *
-       * @param {object} data - Request content, e.g., `username` and `password`.
-       * @param {object} options - Optional configuration.
+       * @param {object} user - Object with `username` and `password` properties.
+       * @param {object} config - Optional configuration object sent to `POST`.
        * @return {promise} A response promise.
        */
 
-      getAccessToken(data, options) {
-        data = angular.extend({
+      getAccessToken(user, options) {
+        // Check if `user` has required properties.
+        if (!user || !user.username || !user.password) {
+          throw new Error('`user` must be an object with `username` and `password` properties.');
+        }
+
+        var data = {
           client_id: config.clientId,
-          grant_type: 'password'
-        }, data);
+          grant_type: 'password',
+          username: user.username,
+          password: user.password
+        };
 
         if (null !== config.clientSecret) {
           data.client_secret = config.clientSecret;
@@ -123,10 +132,7 @@ function OAuthProvider() {
         data = queryString.stringify(data);
 
         options = angular.extend({
-          headers: {
-            'Authorization': undefined,
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }, options);
 
         return $http.post(`${config.baseUrl}${config.grantPath}`, data, options).then((response) => {
@@ -140,17 +146,15 @@ function OAuthProvider() {
        * Retrieves the `refresh_token` and stores the `response.data` on cookies
        * using the `OAuthToken`.
        *
-       * @param {object} data - Request content.
-       * @param {object} options - Optional configuration.
        * @return {promise} A response promise.
        */
 
-      getRefreshToken(data, options) {
-        data = angular.extend({
+      getRefreshToken() {
+        var data = {
           client_id: config.clientId,
           grant_type: 'refresh_token',
           refresh_token: OAuthToken.getRefreshToken(),
-        }, data);
+        };
 
         if (null !== config.clientSecret) {
           data.client_secret = config.clientSecret;
@@ -158,12 +162,9 @@ function OAuthProvider() {
 
         data = queryString.stringify(data);
 
-        options = angular.extend({
-          headers: {
-            'Authorization': undefined,
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        }, options);
+        var options = {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        };
 
         return $http.post(`${config.baseUrl}${config.grantPath}`, data, options).then((response) => {
           OAuthToken.setToken(response.data);
@@ -176,31 +177,17 @@ function OAuthProvider() {
        * Revokes the `token` and removes the stored `token` from cookies
        * using the `OAuthToken`.
        *
-       * @param {object} data - Request content.
-       * @param {object} options - Optional configuration.
        * @return {promise} A response promise.
        */
 
-      revokeToken(data, options) {
-        var refreshToken = OAuthToken.getRefreshToken();
+      revokeToken() {
+        var data = queryString.stringify({
+          token: OAuthToken.getRefreshToken() ? OAuthToken.getRefreshToken() : OAuthToken.getAccessToken()
+        });
 
-        data = angular.extend({
-          client_id: config.clientId,
-          token: refreshToken ? refreshToken : OAuthToken.getAccessToken(),
-          token_type_hint: refreshToken ? 'refresh_token' : 'access_token'
-        }, data);
-
-        if (null !== config.clientSecret) {
-          data.client_secret = config.clientSecret;
-        }
-
-        data = queryString.stringify(data);
-
-        options = angular.extend({
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
-        }, options);
+        var options = {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        };
 
         return $http.post(`${config.baseUrl}${config.revokePath}`, data, options).then((response) => {
           OAuthToken.removeToken();
@@ -212,8 +199,6 @@ function OAuthProvider() {
 
     return new OAuth();
   };
-
-  this.$get.$inject = ['$http', 'OAuthToken'];
 }
 
 /**

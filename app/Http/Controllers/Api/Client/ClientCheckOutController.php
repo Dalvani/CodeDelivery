@@ -79,10 +79,10 @@ class ClientCheckoutController extends Controller
             ->findWhere(['client_id'=>$idUser,'id'=>$id]);
     }
 
-    public function authenticated()
+    /*public function authenticated()
     {
         $id = Authorizer::getResourceOwnerId();
 
         return $this->userRepository->with('client')->find($id);
-    }
+    }*/
 }

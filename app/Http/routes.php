@@ -75,11 +75,13 @@ Route::group(['middleware' => 'cors'], function(){
             Route::resource('order','Api\Deliveryman\DeliverymanCheckoutController', ['except' => ['create', 'edit', 'destroy', 'store']]);
 
             Route::patch('order/{id}/update-status',['as' => 'orders.update_status', 'uses' => 'Api\Deliveryman\DeliverymanCheckoutController@updateStatus']);
+
+            Route::post('order/{id}/geo',['as' => 'orders.geo', 'uses' => 'Api\Deliveryman\DeliverymanCheckoutController@geo']);
         });
 
         Route::get('cupom/{code}', 'Api\CupomController@show');
-
-        Route::get('authenticated', 'Api\Client\ClientCheckoutController@authenticated');
+        Route::get('authenticated', 'Api\UserController@authenticated');
+        Route::patch('device_token', 'Api\UserController@updateDeviceToken');
 
         Route::get('teste', function(){
             return [

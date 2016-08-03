@@ -16,7 +16,7 @@ Choose your preferred method:
 
 ###### 1. Download `angular-oauth2` dependencies.
 
-* [angular](https://github.com/angular/bower-angular)
+* [angular](https://github.com/angular/angular.js)
 * [angular-cookies](https://github.com/angular/bower-angular-cookies)
 * [query-string](https://github.com/sindresorhus/query-string)
 
@@ -27,7 +27,7 @@ If you're using `bower` they will be automatically downloaded upon installing th
 ```html
 <script src="<VENDOR_FOLDER>/angular/angular.min.js"></script>
 <script src="<VENDOR_FOLDER>/angular-cookies/angular-cookies.min.js"></script>
-<script src="<VENDOR_FOLDER>/query-string/query-string.js"></script>
+<script src="<VENDOR_FOLDER>/query-string/query-string.min.js"></script>
 <script src="<VENDOR_FOLDER>/angular-oauth2/dist/angular-oauth2.min.js"></script>
 ```
 
@@ -177,10 +177,11 @@ It will be awesome if you can help us evolve `angular-oauth2`. Want to help?
 
 1. [Fork it](https://github.com/seegno/angular-oauth2).
 2. `npm install`.
-3. Do your magic.
-4. Run the tests: `gulp test`.
-5. Build: `gulp build`
-6. Create a [Pull Request](https://github.com/seegno/angular-oauth2/compare).
+3. `bower install`
+4. Do your magic.
+5. Run the tests: `gulp test`.
+6. Build: `gulp build`
+7. Create a [Pull Request](https://github.com/seegno/angular-oauth2/compare).
 
 *The source files are written in ES6.*
 

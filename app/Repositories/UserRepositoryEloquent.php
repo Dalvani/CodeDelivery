@@ -5,6 +5,7 @@ namespace CodeDelivery\Repositories;
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
 use CodeDelivery\Models\User;
+use CodeDelivery\Presenters\UserPresenter;
 
 /**
  * Class UserRepositoryEloquent
@@ -38,6 +39,14 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
 
     public function presenter()
     {
-        return \CodeDelivery\Presenters\UserPresenter::class;
+        return UserPresenter::class;
+    }
+
+    public function updateDeviceToken($id, $deviceToken)
+    {
+        $model = $this->model->find($id);
+        $model->device_token = $deviceToken;
+        $model->save();
+        return $this->parserResult($model);
     }
 }

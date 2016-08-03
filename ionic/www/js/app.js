@@ -5,32 +5,56 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter.controllers', []);
 angular.module('starter.services', []);
+angular.module('starter.filters', []);
 
 angular.module('starter', [
-    'ionic', 'angular-oauth2', 'starter.controllers', 'starter.services', 'ngResource', 'ngCordova',
+    'ionic',  'ionic.service.core', 'starter.controllers', 'starter.services', 'starter.filters',
+    'angular-oauth2', 'ngResource', 'ngCordova', 'uiGmapgoogle-maps', 'pusher-angular',
 ])
 
 .constant('appConfig', {
-    //baseUrl: 'http://laravel-codedelivery.local'
-    baseUrl: 'http://192.168.168.155:8000'
+    //baseUrl: 'http://laravel-codedelivery.dev',
+    //baseUrl: 'http://192.168.168.155:8000',
+    baseUrl: 'http://192.168.110.8:8000',
+    pusherKey: '195a3fa43d2baa019f40'
 })
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+.run(function($ionicPlatform, $window, appConfig, $localStorage) {
+    $window.client = new Pusher(appConfig.pusherKey);
 
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
-      cordova.plugins.Keyboard.disableScroll(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
+    $ionicPlatform.ready(function() {
+        if(window.cordova && window.cordova.plugins.Keyboard) {
+          // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+          // for form inputs)
+          cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+
+          // Don't remove this line unless you know what you are doing. It stops the viewport
+          // from snapping when text inputs are focused. Ionic handles this internally for
+          // a much nicer keyboard experience.
+          cordova.plugins.Keyboard.disableScroll(true);
+        }
+        if(window.StatusBar) {
+          StatusBar.styleDefault();
+        }
+
+        Ionic.io();
+        var push = new Ionic.Push({
+            debug: true,
+            onNotification: function (message) {
+                //console.log(message);
+                alert(message.text);
+            },
+            pluginConfig: {
+                android: {
+                    iconColor: "red"
+                }
+            }
+        });
+        push.register(function (token) {
+            //console.log(token);
+            $localStorage.set('device_token', token.token);
+        });
+    });
 })
 
 .config(function($stateProvider, $urlRouterProvider, OAuthProvider, OAuthTokenProvider, appConfig, $provide) {
@@ -61,8 +85,10 @@ angular.module('starter', [
         })
         .state('client', {
             abstract: true,
+            cache: false,
             url: '/client',
-            template: '<ion-nav-view/>'
+            templateUrl: 'templates/client/menu.html',
+            controller: 'ClientMenuCtrl'
         })
         .state('client.checkout', {
             cache: false,
@@ -86,11 +112,41 @@ angular.module('starter', [
             templateUrl: 'templates/client/view_products.html',
             controller: 'ClientViewProductCtrl'
         })
-        .state('client.view_orders', {
-            url: '/view_orders',
-            templateUrl: 'templates/client/view_orders.html',
+        .state('client.order', {
+            url: '/order',
+            templateUrl: 'templates/client/order.html',
+            controller: 'ClientOrderCtrl'
+        })
+        .state('client.view_order', {
+            url: '/view_order/:id',
+            templateUrl: 'templates/client/view_order.html',
             controller: 'ClientViewOrderCtrl'
-        });
+        })
+        .state('client.view_delivery', {
+            cache: false,
+            url: '/view_delivery/:id',
+            templateUrl: 'templates/client/view_delivery.html',
+            controller: 'ClientViewDeliveryCtrl'
+        })
+        .state('deliveryman', {
+            abstract: true,
+            cache: false,
+            url: '/deliveryman',
+            templateUrl: 'templates/deliveryman/menu.html',
+            controller: 'DeliverymanMenuCtrl'
+        })
+        .state('deliveryman.order', {
+            url: '/order',
+            templateUrl: 'templates/deliveryman/order.html',
+            controller: 'DeliverymanOrderCtrl'
+        })
+        .state('deliveryman.view_order', {
+            cache: false,
+            url: '/view_order/:id',
+            templateUrl: 'templates/deliveryman/view_order.html',
+            controller: 'DeliverymanViewOrderCtrl'
+        })
+    ;
 
     $urlRouterProvider.otherwise('/login');
 

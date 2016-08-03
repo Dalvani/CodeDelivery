@@ -9,6 +9,6 @@ angular.module('starter.controllers')
             $cart.clear();
 
             $scope.openListOrder = function() {
-                $state.go('client.view_orders');
+                $state.go('client.order');
             };
         }]);
